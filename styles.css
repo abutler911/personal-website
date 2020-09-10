@@ -3,6 +3,7 @@ body {
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
+	font-family: 'poppins', sans-serif;
 }
 
 .navbar {
@@ -25,7 +26,7 @@ body {
 #page1 .container h1 {
 	text-align: center;
 	padding-top: 300px;
-	font-family: 'Titillium Web', sans-serif;
+	/* font-family: 'Titillium Web', sans-serif; */
 	font-size: 3em;
 	letter-spacing: .5em;
 	text-transform: uppercase;
@@ -34,7 +35,7 @@ body {
 #page1 .container h2 {
 	text-align: center;
 	padding-top: 10px;
-	font-family: 'Titillium Web', sans-serif;
+	/* font-family: 'Titillium Web', sans-serif; */
 	font-size: 1.5em;
 	letter-spacing: .5em;
 }
@@ -106,4 +107,13 @@ p {
 	padding-bottom: 20px;
 	padding-top: 20px;
 	letter-spacing: 0.5em;
+}
+
+@media screen and (max-width: 600px) {
+	.col-sm-6 {
+		width: 100%;
+	}
+	. col-md-4 {
+		width: 100%;
+	}
 }
