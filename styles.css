@@ -55,9 +55,12 @@ p {
 		width: 100%;
 	}
 
-	h1,
+	h1 {
+		font-size: 18px;
+	}
+
 	h2,
 	p {
-		font-size: 30px;
+		font-size: 15px;
 	}
 }
