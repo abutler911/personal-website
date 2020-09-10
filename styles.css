@@ -4,6 +4,7 @@ body {
 	padding: 0;
 	box-sizing: border-box;
 	font-family: 'poppins', sans-serif;
+	background-color: blue;
 }
 
 h1 {
@@ -53,7 +54,6 @@ img {
 }
 
 .content {
-	background-color: white;
 	padding: 10px;
 }
 
