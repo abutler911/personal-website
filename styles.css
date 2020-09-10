@@ -6,7 +6,9 @@ body {
 	font-family: 'poppins', sans-serif;
 }
 
-h1 {
+h1,
+h2,
+p {
 	text-align: center;
 	font-size: 1.3em;
 	word-break: break-all;
