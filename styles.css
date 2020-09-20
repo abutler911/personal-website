@@ -1,91 +1,109 @@
-* {
+body {
+	font-size: 2em;
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
-	font-family: 'Poppins', sans-serif;
 }
 
-.container {
-	display: grid;
-
-	grid-template-areas: "header header header" "nav content side" "footer footer footer";
-
-	grid-template-columns: 200px 1fr 200px;
-	grid-template-rows: auto 1fr auto;
-	grid-gap: 10px;
-
-	height: 100vh;
+.navbar {
+	opacity: 0.7;
 }
 
-header {
-	grid-area: header;
-	border: 1px solid gray;
-	display: flex;
-	justify-self: space-between;
+.collapse .navbar-collapse li {
+	color: green;
+}
+
+#page1 {
+	width: auto 0;
+	height: 1000px;
+	background-image: url("http://static.tumblr.com/979d3f94236d532405e835936360daad/ltwks4k/h7Hopb6fu/tumblr_static_rykzyglv6xwwwcckoo0kccgg.jpg");
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+#page1 .container h1 {
 	text-align: center;
+	padding-top: 300px;
+	font-family: 'Titillium Web', sans-serif;
+	font-size: 3em;
+	letter-spacing: .5em;
+	text-transform: uppercase;
 }
 
-nav {
-	grid-area: nav;
-	margin-left: 0.5rem;
+#page1 .container h2 {
 	text-align: center;
-	border: 1px solid gray;
+	padding-top: 10px;
+	font-family: 'Titillium Web', sans-serif;
+	font-size: 1.5em;
+	letter-spacing: .5em;
 }
 
-nav a {
-	display: block;
-	padding: 10px 30px;
-	color: black;
-	text-decoration: none;
-	cursor: pointer;
+#page2 {
+	width: auto 0;
+	height: 1100px;
+	background-position: center;
+	background-image: url("http://e-sehiyye.gov.az/images/slide/backgrounds/b27.jpg");
 }
 
-nav li {
-	color: black;
-	border-top: 1px solid;
-	position: relative;
+.footer {
+	width: auto 0;
+	height: 170px;
+	background-position: center;
+	background-image: url("http://www.willidigital.at/wp-content/uploads/2017/05/1.jpg");
+}
+
+.footer i {
+	font-size: 30px;
+	letter-spacing: 50px;
+	padding-top: 10px;
+	color: white;
+}
+
+.fa-facebook:hover {
+	color: #3b5998;
+	transition: 0.2s;
+}
+
+.fa-twitter:hover {
+	color: #55acee;
+	transition: 0.2s;
+}
+
+.fa-instagram:hover {
+	color: #e95950;
+	transition: 0.2s;
+}
+
+.fa-linkedin:hover {
+	color: #007bb5;
+	transition: 0.2s;
+}
+
+.fa-github:hover {
+	color: #000000;
+	transition: 0.2s;
+}
+
+img {
 	width: 100%;
-	display: list-item;
-	list-style: none;
-	background-color: rgba(232, 236, 241, 1);
+	height: 100%;
+	float: left;
+	margin: 1.66%;
 }
 
-nav li:hover {
-	background-color: rgba(218, 223, 225, 1);
+.caption p {
+	font-size: 16px;
 }
 
-main {
-	grid-area: content;
-}
-
-main img {
-	width: 20%;
-	height: auto;
-	margin: 2%;
-	display: row;
-}
-
-aside {
-	grid-area: side;
-	margin-right: 0.5rem;
-}
-
-footer {
-	grid-area: footer;
-
+p {
+	font-family: 'Titillium Web', sans-serif;
+	margin: 1.66%;
+	font-size: 3em;
+	text-transform: uppercase;
 	text-align: center;
-}
-
-@media (max-width: 768px) {
-	.container {
-		grid-template-areas: "header" "nav" "content" "side" "footer";
-
-		grid-template-columns: 1fr;
-		grid-template-rows: auto minmax(75px, auto) 1fr minmax(75px, auto) auto;
-	}
-
-	nav,
-	aside {
-		margin: 0;
-	}
+	width: 100%;
+	padding-bottom: 20px;
+	padding-top: 20px;
+	letter-spacing: 0.5em;
 }
