@@ -8,12 +8,18 @@
         box-sizing: inherit;
     }
     
+    #body {
+        background-color: rgba(218, 223, 225, 0.3);
+        max-width: 1200px;
+        margin: 0 auto;
+        margin-bottom: 20px;
+    }
+    
     .container {
         margin: 0 auto;
-        max-width: 1200px;
+        max-width: 1600px;
         height: 105vh;
         padding: 0 1rem;
-        background-color: rgba(218, 223, 225, 0.3);
     }
     
     #header {
@@ -89,6 +95,7 @@
     #footer {
         position: absolute;
         width: 100%;
+        text-align: center;
     }
     
     @media screen and (min-width: 600px) {
