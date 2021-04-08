@@ -33,7 +33,19 @@ input[type=submit]:hover {
 
 form input {
     border-radius: 5px;
+    margin: 5px;
     width: 100%;
+    height: 40px;
+}
+
+form label {
+    margin: 5px;
+}
+
+form textarea {
+    border-radius: 5px;
+    width: 100%;
+    margin-left: 4px;
 }
 
 .column {
