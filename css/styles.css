@@ -8,12 +8,6 @@
         box-sizing: inherit;
     }
     
-    body {
-        /* background-image: url("/resources/tree-1031814_1920.jpg");
-    background-repeat: no-repeat;
-    background-size: cover; */
-    }
-    
     .container {
         margin: 0 auto;
         max-width: 1200px;
@@ -22,18 +16,18 @@
         background-color: rgba(218, 223, 225, 0.3);
     }
     
-    header {
+    #header {
         text-align: center;
         font-family: 'Titillium Web', sans-serif;
     }
     
-    header h1 {
+    #header h1 {
         font-size: 3rem;
         color: black;
         opacity: 0.7;
     }
     
-    header h2 {
+    #header h2 {
         font-size: 2rem;
         color: black;
         opacity: 0.6;
@@ -92,8 +86,9 @@
         padding-bottom: 20px;
     }
     
-    footer div {
-        padding: 10px;
+    #footer {
+        position: absolute;
+        width: 100%;
     }
     
     @media screen and (min-width: 600px) {
