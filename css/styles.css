@@ -13,8 +13,6 @@ html {
 	max-width: 1200px;
 	margin: 0 auto;
 	margin-bottom: 20px;
-	border: 1px solid black;
-	border-radius: 10px;
 }
 
 #body h1 {
@@ -37,35 +35,16 @@ html {
 	text-align: center;
 	background-color: rgba(218, 223, 225, 0.3);
 	padding: 5px;
-	border: 1px solid black;
-	border-radius: 10px;
 }
 .construction {
 	color: red;
 }
-/* #header {
-        text-align: center;
-        font-family: 'Titillium Web', sans-serif;
-    }
-    
-    #header h1 {
-        font-size: 3rem;
-        color: black;
-        opacity: 0.7;
-    }
-    
-    #header h2 {
-        font-size: 2rem;
-        color: black;
-        opacity: 0.6;
-    } */
 
 .responsive-image {
 	max-width: 100%;
 }
 
 .cell {
-	/* background: gray; */
 	padding: 10px;
 }
 
