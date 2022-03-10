@@ -172,3 +172,77 @@ img {
 	font-size: 20px;
 	font-weight: 600;
 }
+
+.contact {
+	background: #fff;
+}
+
+.formBx {
+	min-width: 60%;
+}
+
+.formBx form {
+	display: flex;
+	flex-direction: column;
+}
+
+.formBx form h3,
+.contactInfo h3 {
+	color: #111;
+	font-size: 20px;
+	font-weight: 500;
+	margin-bottom: 10px;
+}
+
+.formBx form input,
+.formBx form textarea {
+	margin-bottom: 20px;
+	padding: 15px;
+	font-size: 16px;
+	border: none;
+	outline: none;
+	background: #d7d7d5;
+	color: #111;
+	resize: none;
+}
+
+.formBx form textarea {
+	min-height: 200px;
+}
+
+.formBx form input::placeholder,
+.formBx form textarea::placeholder {
+	color: #939392;
+}
+
+.formBx form input[type="submit"] {
+	max-width: 100px;
+	background: #2196f3;
+	cursor: pointer;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+}
+
+.contactInfo {
+	min-width: 40%;
+}
+
+.contactInfoBx {
+	position: relative;
+}
+
+.contactInfoBx .box {
+	position: relative;
+	padding: 20px 0;
+	display: flex;
+}
+
+.contactInfoBx .box .icon {
+	min-width: 40px;
+	padding-top: 4px;
+	color: #111;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 24px;
+}
