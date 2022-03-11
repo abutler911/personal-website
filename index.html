@@ -12,22 +12,22 @@
 <body>
     <header>
         <a href="#" class = "logo">Portfolio</a>
-        <div class="toggle"></div>
+        <div class="toggle" onclick="toggleMenu();"></div>
         <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Work</a></li>
-            <li><a href="#">Contact</a></li>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#work">Work</a></li>
+            <li><a href="#contact">Contact</a></li>
         </ul>
     </header>
-    <section class = "banner">
+    <section class = "banner" id="home">
         <div class = "textBx">
             <h2>Hello, I'm<br><span>Andrew Butler.</span></h2>
             <h3>I don't know much about anything at all.</h3>
-            <a href="#" class="btn">About Me</a>
+            <a href="#about" class="btn">About Me</a>
         </div>
     </section>
-    <section class="about">
+    <section class="about" id="about">
         <div class="heading">
             <h2>About Me</h2>
         </div>
@@ -46,7 +46,7 @@
             </div>
         </div>
     </section>
-    <section class="work">
+    <section class="work" id="work">
         <div class="heading white">
             <h2>My Work</h2>
             <p>Some of my projects that I have worked on.</p>
@@ -74,7 +74,7 @@
             </div>
         </div>
     </section>
-    <section class="contact">
+    <section class="contact" id="contact">
         <div class="heading">
             <h2>Contact Me</h2>
             <p>Feel free to reach out if you have any questions or would like to connect.</p>
@@ -123,11 +123,19 @@
             </div>
         </div>
     </section>
+    <div class ="copyright">
+        <p>Copyright 2022 | EAB Solutions, Inc. All Rights Reserved.</p>
+    </div>
     <script type="text/javascript">
         window.addEventListener('scroll', function() {
             var header = document.querySelector('header');
             header.classList.toggle('sticky', window.scrollY > 0);
         });
+
+        function toggleMenu() {
+            var menuToggle = document.querySelector('.toggle');
+            menuToggle.classList.toggle('active');
+        }
     </script>
     
 
