@@ -280,8 +280,8 @@ img {
 	}
 	.menu {
 		position: fixed;
-		top: 0;
-		left: 0;
+		top: 75px;
+		left: -100%;
 		display: block;
 		padding: 100px 50px;
 		text-align: center;
@@ -292,9 +292,17 @@ img {
 		z-index: 999;
 		border-top: 1px solid rgba(0, 0, 0, 0.2);
 	}
-	header ul li a {
-		color: #fff;
+
+	.menu.active {
+		Left: 0;
 	}
+
+	header ul li a {
+		color: #111;
+		font-size: 24px;
+		margin: 10px;
+	}
+
 	.toggle {
 		width: 40px;
 		height: 40px;
@@ -304,14 +312,64 @@ img {
 		background-size: 30px;
 		cursor: pointer;
 	}
-	.toggle .active {
+	.toggle.active {
 		background: url("/resources/close.png");
 		background-position: center;
 		background-repeat: no-repeat;
 		background-size: 25px;
 		cursor: pointer;
 	}
-	header.sticky.toggle {
+	header.sticky .toggle {
 		filter: invert(1);
+	}
+	section {
+		padding: 100px 50px;
+	}
+	.banner {
+		padding: 150px 50px 100px;
+	}
+	.banner h2 {
+		font-size: 1.5em;
+	}
+	.banner h3 {
+		font-size: 1em;
+	}
+	.btn {
+		margin-top: 10px;
+		padding: 10px 20px;
+		font-size: 16px;
+	}
+	.heading h2 {
+		font-size: 24px;
+	}
+	.contentBx h3 {
+		font-size: 20px;
+	}
+	.content {
+		flex-direction: column;
+	}
+	.w50 {
+		margin-bottom: 20px;
+	}
+	.work .content .workBx {
+		margin: 10px;
+		width: 100%;
+		padding: 10px;
+	}
+	.contactInfo {
+		margin: 20px 0;
+	}
+}
+
+@media (max-width: 600px) {
+	header,
+	header.sticky {
+		padding: 20px 20px;
+	}
+	.banner {
+		padding: 150px 20px 100px;
+	}
+	section {
+		padding: 100px 20px;
 	}
 }

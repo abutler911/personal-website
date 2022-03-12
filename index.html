@@ -13,11 +13,11 @@
     <header>
         <a href="#" class = "logo">Portfolio</a>
         <div class="toggle" onclick="toggleMenu();"></div>
-        <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#work">Work</a></li>
-            <li><a href="#contact">Contact</a></li>
+        <ul class="menu">
+            <li><a href="#home" onclick="toggleMenu();">Home</a></li>
+            <li><a href="#about" onclick="toggleMenu();">About</a></li>
+            <li><a href="#work" onclick="toggleMenu();">Work</a></li>
+            <li><a href="#contact" onclick="toggleMenu();">Contact</a></li>
         </ul>
     </header>
     <section class = "banner" id="home">
@@ -53,22 +53,22 @@
         </div>
         <div class ="content">
             <div class="workBx">
-                <img src="/resources/portfolio.jpg">
+                <img src="/resources/business-strategy.jpg">
                 <h2>Small Business Plan</h2>
                 <p>A small business plan that I put together for a company I was doing consulting work for. </p>
             </div>
             <div class="workBx">
-                <img src="/resources/portfolio.jpg">
+                <img src="/resources/quote.jpeg">
                 <h2>Quote Calculator</h2>
                 <p>A Javascript calculator that a small business could use to calculate quotes for products.</p>
             </div>
             <div class="workBx">
-                <img src="/resources/portfolio.jpg">
+                <img src="/resources/FAQ-image.jpg">
                 <h2>Small Business FAQ Page</h2>
                 <p>A Frequently Asked Question or FAQ for a small business to help customers better understand their products.</p>
             </div>
             <div class="workBx">
-                <img src="/resources/portfolio.jpg">
+                <img src="/resources/resume.jpg">
                 <h2>Personal Resume</h2>
                 <p>A personal electronic resume for myself. </p>
             </div>
@@ -134,8 +134,10 @@
 
         function toggleMenu() {
             var menuToggle = document.querySelector('.toggle');
+            var menu = document.querySelector('.menu');
             menuToggle.classList.toggle('active');
-        }
+            menu.classList.toggle('active');
+        };
     </script>
     
 
