@@ -164,14 +164,15 @@ img {
 	background: #2196f3;
 }
 
-/* .work .content .workBx img {
-	max-width: 80px;
-	filter: invert(1);
-} */
+.work .content .workBx img {
+	max-width: 100%;
+	max-height: 50%;
+}
 
 .work .content .workBx h2 {
 	font-size: 20px;
 	font-weight: 600;
+	margin-top: 10px;
 }
 
 .contact {
@@ -350,7 +351,9 @@ img {
 	}
 	.w50 {
 		margin-bottom: 20px;
+		align-items: center;
 	}
+
 	.work .content .workBx {
 		margin: 10px;
 		width: 100%;
