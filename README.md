@@ -1,1 +1,0 @@
-This is a personal portfolio website I am working to create to showcase different projects I have worked on over the last couple of years. I am always open to feedback on design, layout, structure, etc. Thanks for taking a look!
