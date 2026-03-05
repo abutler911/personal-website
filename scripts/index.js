@@ -1,20 +1,43 @@
-// add class navbarDark on navbar scroll
-const header = document.querySelector(".navbar");
-console.log(header);
-window.onscroll = function () {
-  const top = window.scrollY;
-  if (top >= 100) {
-    header.classList.add("navbarDark");
-  } else {
-    header.classList.remove("navbarDark");
-  }
-};
-// collapse navbar after click on small devices
-const navLinks = document.querySelectorAll(".nav-item");
-const menuToggle = document.getElementById("navbarSupportedContent");
+// ─── Navbar scroll effect ───
+const navbar = document.getElementById('navbar');
+window.addEventListener('scroll', () => {
+  navbar.classList.toggle('scrolled', window.scrollY > 50);
+});
 
-navLinks.forEach((l) => {
-  l.addEventListener("click", () => {
-    new bootstrap.Collapse(menuToggle).toggle();
+// ─── Mobile nav toggle ───
+const navToggle = document.getElementById('navToggle');
+const navLinks = document.getElementById('navLinks');
+
+navToggle.addEventListener('click', () => {
+  navLinks.classList.toggle('open');
+});
+
+function closeNav() {
+  navLinks.classList.remove('open');
+}
+
+// ─── Scroll reveal ───
+const revealEls = document.querySelectorAll('.reveal');
+const observer = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry, i) => {
+      if (entry.isIntersecting) {
+        setTimeout(() => entry.target.classList.add('visible'), i * 80);
+        observer.unobserve(entry.target);
+      }
+    });
+  },
+  { threshold: 0.15 }
+);
+revealEls.forEach((el) => observer.observe(el));
+
+// ─── Smooth anchor scroll ───
+document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+  anchor.addEventListener('click', function (e) {
+    e.preventDefault();
+    const target = document.querySelector(this.getAttribute('href'));
+    if (target) {
+      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
   });
 });
