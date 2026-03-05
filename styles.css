@@ -230,27 +230,27 @@ nav.scrolled {
   color: var(--text-primary);
 }
 
-.hero h1 span {
+.hero h1 > span {
   display: block;
   opacity: 0;
   animation: fadeUp 0.8s ease forwards;
 }
 
-.hero h1 span:nth-child(1) {
+.hero h1 > span:nth-child(1) {
   animation-delay: 0.5s;
 }
-.hero h1 span:nth-child(2) {
+.hero h1 > span:nth-child(2) {
   animation-delay: 0.7s;
+}
+
+.hero h1 > span[data-scramble] {
+  animation: none;
+  opacity: 1;
 }
 
 .hero h1 .italic {
   font-style: italic;
   color: var(--accent);
-}
-
-.hero h1 span[data-scramble] {
-  animation: none;
-  opacity: 1;
 }
 
 .scramble-char {
