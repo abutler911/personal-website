@@ -248,6 +248,30 @@ nav.scrolled {
   color: var(--accent);
 }
 
+.hero h1 span[data-scramble] {
+  animation: none;
+  opacity: 1;
+}
+
+.scramble-char {
+  display: inline-block;
+  min-width: 0.05em;
+}
+
+.scramble-char.scrambling {
+  color: var(--accent);
+  opacity: 0.6;
+}
+
+.scramble-char.resolved {
+  opacity: 1;
+  transition: opacity 0.15s ease;
+}
+
+.scramble-char.space {
+  width: 0.3em;
+}
+
 .hero-intro {
   margin-top: 2rem;
   font-size: clamp(1rem, 1.3vw, 1.15rem);
