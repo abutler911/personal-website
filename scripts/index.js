@@ -1,127 +1,151 @@
-// ─── Text scramble effect ───
+// ─── Theme ───
+const root = document.documentElement;
+const themeToggle = document.getElementById("themeToggle");
+
+const savedTheme = localStorage.getItem("ab-theme") || "light";
+root.setAttribute("data-theme", savedTheme);
+
+themeToggle.addEventListener("click", () => {
+  const next = root.getAttribute("data-theme") === "light" ? "dark" : "light";
+  root.setAttribute("data-theme", next);
+  localStorage.setItem("ab-theme", next);
+});
+
+// ─── Text scramble ───
 const CHARS =
-  'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%&*';
+  "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#";
 
 function scrambleText(element, delay) {
-  // Get the plain text, ignoring HTML tags
+  const isLast = element.classList.contains("name-last");
   const finalText = element.textContent;
-  const isItalic = element.querySelector('.italic') !== null;
 
-  // Build character spans
-  const chars = finalText.split('').map((char, i) => ({
+  const chars = finalText.split("").map((char) => ({
     final: char,
-    isSpace: char === ' ',
+    isSpace: char === " ",
     resolved: false,
     el: null,
   }));
 
-  // Clear element and insert character spans
-  const wrapper = isItalic
-    ? document.createElement('em')
-    : document.createDocumentFragment();
-  if (isItalic) wrapper.className = 'italic';
+  const fragment = document.createDocumentFragment();
 
   chars.forEach((c) => {
-    const span = document.createElement('span');
-    span.className = 'scramble-char' + (c.isSpace ? ' space' : '');
+    const span = document.createElement("span");
+    span.className = "scramble-char" + (c.isSpace ? " space" : "");
     span.textContent = c.isSpace
-      ? '\u00A0'
+      ? "\u00A0"
       : CHARS[Math.floor(Math.random() * CHARS.length)];
-    span.style.opacity = '0';
+    span.style.opacity = "0";
     c.el = span;
-    wrapper.appendChild(span);
+    fragment.appendChild(span);
   });
 
-  element.innerHTML = '';
-  element.appendChild(wrapper);
+  element.innerHTML = "";
+  element.appendChild(fragment);
 
-  // Phase 1: Stagger-reveal all chars as random glyphs
   setTimeout(() => {
     chars.forEach((c, i) => {
       setTimeout(() => {
-        c.el.style.opacity = '1';
-        if (!c.isSpace) {
-          c.el.classList.add('scrambling');
-        }
-      }, i * 30);
+        c.el.style.opacity = "1";
+      }, i * 25);
     });
 
-    // Phase 2: Scramble loop — randomize unresolved chars
     const scrambleInterval = setInterval(() => {
       chars.forEach((c) => {
         if (!c.resolved && !c.isSpace) {
           c.el.textContent = CHARS[Math.floor(Math.random() * CHARS.length)];
         }
       });
-    }, 50);
+    }, 55);
 
-    // Phase 3: Resolve chars left-to-right
-    const resolveStart = chars.length * 30 + 200;
+    const resolveStart = chars.length * 25 + 150;
+
     chars.forEach((c, i) => {
       setTimeout(
         () => {
           c.resolved = true;
-          c.el.textContent = c.isSpace ? '\u00A0' : c.final;
-          c.el.classList.remove('scrambling');
-          c.el.classList.add('resolved');
-
-          // Stop interval after last char resolves
-          if (i === chars.length - 1) {
-            clearInterval(scrambleInterval);
+          c.el.textContent = c.isSpace ? "\u00A0" : c.final;
+          if (isLast) {
+            c.el.style.fontStyle = "italic";
+            c.el.style.color = "var(--accent)";
           }
+          if (i === chars.length - 1) clearInterval(scrambleInterval);
         },
-        resolveStart + i * 60
+        resolveStart + i * 48,
       );
     });
   }, delay);
 }
 
-// Init scramble on all marked elements
-document.querySelectorAll('[data-scramble]').forEach((el) => {
-  const delay = parseInt(el.dataset.delay, 10) || 0;
-  scrambleText(el, delay);
+document.querySelectorAll("[data-scramble]").forEach((el) => {
+  scrambleText(el, parseInt(el.dataset.delay) || 0);
 });
 
-// ─── Navbar scroll effect ───
-const navbar = document.getElementById('navbar');
-window.addEventListener('scroll', () => {
-  navbar.classList.toggle('scrolled', window.scrollY > 50);
-});
+// ─── Navbar scroll ───
+const navbar = document.getElementById("navbar");
+window.addEventListener(
+  "scroll",
+  () => {
+    navbar.classList.toggle("scrolled", window.scrollY > 60);
+  },
+  { passive: true },
+);
 
-// ─── Mobile nav toggle ───
-const navToggle = document.getElementById('navToggle');
-const navLinks = document.getElementById('navLinks');
+// ─── Mobile nav ───
+const navToggle = document.getElementById("navToggle");
+const navLinks = document.getElementById("navLinks");
 
-navToggle.addEventListener('click', () => {
-  navLinks.classList.toggle('open');
-});
-
+navToggle.addEventListener("click", () => navLinks.classList.toggle("open"));
 function closeNav() {
-  navLinks.classList.remove('open');
+  navLinks.classList.remove("open");
 }
 
 // ─── Scroll reveal ───
-const revealEls = document.querySelectorAll('.reveal');
 const observer = new IntersectionObserver(
   (entries) => {
     entries.forEach((entry, i) => {
       if (entry.isIntersecting) {
-        setTimeout(() => entry.target.classList.add('visible'), i * 80);
+        setTimeout(() => entry.target.classList.add("visible"), i * 80);
         observer.unobserve(entry.target);
       }
     });
   },
-  { threshold: 0.15 }
+  { threshold: 0.1 },
 );
-revealEls.forEach((el) => observer.observe(el));
+
+document
+  .querySelectorAll(".reveal, .project")
+  .forEach((el) => observer.observe(el));
+
+// ─── Animate progress bars ───
+const barObserver = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        const el = entry.target;
+        const width = el.dataset.width;
+        if (width) {
+          setTimeout(() => {
+            el.style.width = width + "%";
+          }, 200);
+        }
+        barObserver.unobserve(el);
+      }
+    });
+  },
+  { threshold: 0.5 },
+);
+
+document
+  .querySelectorAll(".vc-bar-fill")
+  .forEach((el) => barObserver.observe(el));
 
 // ─── Smooth anchor scroll ───
 document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
-  anchor.addEventListener('click', function (e) {
-    e.preventDefault();
-    const target = document.querySelector(this.getAttribute('href'));
+  anchor.addEventListener("click", function (e) {
+    const target = document.querySelector(this.getAttribute("href"));
     if (target) {
-      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      e.preventDefault();
+      target.scrollIntoView({ behavior: "smooth", block: "start" });
     }
   });
 });
