@@ -4,10 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Andrew Butler</title>
-    <meta
-      name="description"
-      content="Andrew Butler — builder, reader, writer. Salt Lake City."
-    />
+    <meta name="description" content="Andrew Butler — builder, reader, writer. Salt Lake City." />
     <link rel="stylesheet" href="styles.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -17,6 +14,7 @@
     />
   </head>
   <body>
+
     <div class="grain"></div>
 
     <!-- Nav -->
@@ -25,37 +23,15 @@
       <ul class="nav-links" id="navLinks">
         <li><a href="#about" onclick="closeNav()">About</a></li>
         <li><a href="#work" onclick="closeNav()">Work</a></li>
+        <li><a href="https://travel.andrewfbutler.com" target="_blank" rel="noopener noreferrer">Travels</a></li>
       </ul>
       <div class="nav-right">
         <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
-          <svg
-            class="icon-sun"
-            width="15"
-            height="15"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="1.5"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          >
-            <circle cx="12" cy="12" r="4" />
-            <path
-              d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"
-            />
+          <svg class="icon-sun" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/>
           </svg>
-          <svg
-            class="icon-moon"
-            width="15"
-            height="15"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="1.5"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          >
-            <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z" />
+          <svg class="icon-moon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/>
           </svg>
         </button>
         <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
@@ -67,6 +43,7 @@
     <!-- Hero -->
     <section class="hero" id="home">
       <div class="hero-inner">
+
         <!-- Text -->
         <div class="hero-text">
           <div class="hero-label">
@@ -74,12 +51,8 @@
             Salt Lake City, Utah
           </div>
           <h1 class="hero-name">
-            <span class="name-first" data-scramble data-delay="300"
-              >Andrew</span
-            >
-            <span class="name-last" data-scramble data-delay="700"
-              ><em>Butler.</em></span
-            >
+            <span class="name-first" data-scramble data-delay="300">Andrew</span>
+            <span class="name-last" data-scramble data-delay="700"><em>Butler.</em></span>
           </h1>
           <p class="hero-desc">
             Retired fire chief. Airline pilot.<br />
@@ -87,19 +60,7 @@
           </p>
           <a href="#work" class="hero-cta">
             <span>See the work</span>
-            <svg
-              width="16"
-              height="16"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="1.5"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            >
-              <line x1="5" y1="12" x2="19" y2="12" />
-              <polyline points="12 5 19 12 12 19" />
-            </svg>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
           </a>
         </div>
 
@@ -107,11 +68,7 @@
         <div class="hero-photo-wrap">
           <div class="photo-outer">
             <div class="photo-inner">
-              <img
-                src="images/20220123_144911.jpg"
-                alt="Andrew Butler"
-                class="hero-photo"
-              />
+              <img src="images/20220123_144911.jpg" alt="Andrew Butler" class="hero-photo" />
               <div class="photo-overlay"></div>
               <div class="photo-scanlines"></div>
             </div>
@@ -129,6 +86,7 @@
             <span class="deco-label">Pilot · Chief · Builder</span>
           </div>
         </div>
+
       </div>
       <div class="hero-scroll">
         <div class="scroll-bar"></div>
@@ -159,77 +117,34 @@
             <h2 class="project-title">Devoured</h2>
             <p class="project-tagline">"Track what consumes you."</p>
             <p class="project-desc">
-              A dark, literary reading tracker built for obsessive readers.
-              Session logging with a persistent timer, Kindle percentage
-              tracking, a 52-week reading plan with drag-and-drop reordering,
-              streak tracking with push notifications, and a Year in Review —
-              all in a moody crimson design. Installed as a PWA on my phone and
-              used every single day.
+              A dark, literary reading tracker built for obsessive readers. Session logging
+              with a persistent timer, Kindle percentage tracking, a 52-week reading plan
+              with drag-and-drop reordering, streak tracking with push notifications, and
+              a Year in Review — all in a moody crimson design. Installed as a PWA on my
+              phone and used every single day.
             </p>
-            <a
-              href="https://books.andrewfbutler.com"
-              class="project-link"
-              style="--link-color: #9b1c1c"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            <a href="https://books.andrewfbutler.com" class="project-link" style="--link-color:#9b1c1c" target="_blank" rel="noopener noreferrer">
               <span>Visit Devoured</span>
-              <svg
-                width="13"
-                height="13"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2.5"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              >
-                <line x1="7" y1="17" x2="17" y2="7" />
-                <polyline points="7 7 17 7 17 17" />
-              </svg>
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
             </a>
           </div>
           <div class="project-visual">
             <div class="visual-card devoured-card">
               <div class="vc-header">
-                <div class="vc-dots">
-                  <span></span><span style="background: #9b1c1c55"></span
-                  ><span></span>
-                </div>
+                <div class="vc-dots"><span></span><span style="background:#9b1c1c55"></span><span></span></div>
                 <span class="vc-label">Devoured</span>
               </div>
               <div class="vc-stats">
-                <div class="vc-stat">
-                  <div class="vc-val" style="color: #9b1c1c">173🔥</div>
-                  <div class="vc-key">The Hunger</div>
-                </div>
-                <div class="vc-stat">
-                  <div class="vc-val">33</div>
-                  <div class="vc-key">Consumed</div>
-                </div>
-                <div class="vc-stat">
-                  <div class="vc-val">195h</div>
-                  <div class="vc-key">At the Table</div>
-                </div>
+                <div class="vc-stat"><div class="vc-val" style="color:#9b1c1c">173🔥</div><div class="vc-key">The Hunger</div></div>
+                <div class="vc-stat"><div class="vc-val">33</div><div class="vc-key">Consumed</div></div>
+                <div class="vc-stat"><div class="vc-val">195h</div><div class="vc-key">At the Table</div></div>
               </div>
               <div class="vc-bar-wrap">
-                <div class="vc-bar-label">
-                  <span>Intensity — Koontz</span
-                  ><span style="color: #9b1c1c">68%</span>
-                </div>
-                <div class="vc-bar-track">
-                  <div
-                    class="vc-bar-fill"
-                    data-width="68"
-                    style="background: #9b1c1c"
-                  ></div>
-                </div>
+                <div class="vc-bar-label"><span>Intensity — Koontz</span><span style="color:#9b1c1c">68%</span></div>
+                <div class="vc-bar-track"><div class="vc-bar-fill" data-width="68" style="background:#9b1c1c"></div></div>
               </div>
               <div class="vc-shelf">
-                <div
-                  class="shelf-book"
-                  style="background: #1a0505; border-top: 2px solid #9b1c1c"
-                ></div>
+                <div class="shelf-book" style="background:#1a0505;border-top:2px solid #9b1c1c"></div>
                 <div class="shelf-book"></div>
                 <div class="shelf-book"></div>
                 <div class="shelf-book"></div>
@@ -256,84 +171,34 @@
               </div>
             </div>
             <h2 class="project-title">Dispatches</h2>
-            <p class="project-tagline">
-              "Independent analysis on modern statecraft."
-            </p>
+            <p class="project-tagline">"Independent analysis on modern statecraft."</p>
             <p class="project-desc">
-              An independent publication covering regional security, industrial
-              capacity, and the procedural requirements of modern statecraft.
-              Full editorial CMS, tag filtering, keyboard shortcuts, per-article
-              reading progress, and a terminal-style loading state. Dark and
-              gold. Deliberately opinionated.
+              An independent publication covering regional security, industrial capacity,
+              and the procedural requirements of modern statecraft. Full editorial CMS,
+              tag filtering, keyboard shortcuts, per-article reading progress, and a
+              terminal-style loading state. Dark and gold. Deliberately opinionated.
             </p>
-            <a
-              href="https://dispatches.andrewfbutler.com"
-              class="project-link"
-              style="--link-color: #c9a24d"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            <a href="https://dispatches.andrewfbutler.com" class="project-link" style="--link-color:#c9a24d" target="_blank" rel="noopener noreferrer">
               <span>Visit Dispatches</span>
-              <svg
-                width="13"
-                height="13"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2.5"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              >
-                <line x1="7" y1="17" x2="17" y2="7" />
-                <polyline points="7 7 17 7 17 17" />
-              </svg>
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
             </a>
           </div>
           <div class="project-visual">
             <div class="visual-card dispatches-card">
               <div class="vc-header">
-                <div class="vc-dots">
-                  <span></span><span style="background: #c9a24d55"></span
-                  ><span></span>
-                </div>
-                <span class="vc-label" style="color: #c9a24d"
-                  >Dispatches // AFB</span
-                >
+                <div class="vc-dots"><span></span><span style="background:#c9a24d55"></span><span></span></div>
+                <span class="vc-label" style="color:#c9a24d">Dispatches // AFB</span>
               </div>
               <div class="dp-item">
-                <div class="dp-meta">
-                  <span class="dp-num">No. 001</span
-                  ><span class="dp-sep">//</span
-                  ><span class="dp-date">Mar 2026</span
-                  ><span
-                    class="dp-badge"
-                    style="color: #c9a24d; border-color: #c9a24d44"
-                    >Security</span
-                  >
-                </div>
+                <div class="dp-meta"><span class="dp-num">No. 001</span><span class="dp-sep">//</span><span class="dp-date">Mar 2026</span><span class="dp-badge" style="color:#c9a24d;border-color:#c9a24d44">Security</span></div>
                 <div class="dp-headline">The Weight of Unspent Shells</div>
-                <div class="dp-sub">
-                  Industrial capacity as a strategic variable in prolonged
-                  conflict...
-                </div>
+                <div class="dp-sub">Industrial capacity as a strategic variable in prolonged conflict...</div>
               </div>
               <div class="dp-divider"></div>
               <div class="dp-item">
-                <div class="dp-meta">
-                  <span class="dp-num">No. 002</span
-                  ><span class="dp-sep">//</span
-                  ><span class="dp-date">Mar 2026</span
-                  ><span
-                    class="dp-badge"
-                    style="color: #8cbf8c; border-color: #8cbf8c44"
-                    >Europe</span
-                  >
-                </div>
+                <div class="dp-meta"><span class="dp-num">No. 002</span><span class="dp-sep">//</span><span class="dp-date">Mar 2026</span><span class="dp-badge" style="color:#8cbf8c;border-color:#8cbf8c44">Europe</span></div>
                 <div class="dp-headline">The Baltic Question</div>
-                <div class="dp-sub">
-                  What the eastern flank reveals about NATO's real
-                  commitments...
-                </div>
+                <div class="dp-sub">What the eastern flank reveals about NATO's real commitments...</div>
               </div>
               <div class="dp-footer-bar">
                 <span>INDEPENDENT PUBLICATION · EST. 2026</span>
@@ -362,59 +227,29 @@
             <p class="project-desc">
               A personal social platform — Instagram's structure, rebuilt for a
               single author. Posts, stories, and thoughts. Anyone can browse and
-              follow along; only I can create. A living journal disguised as a
-              social app, where the feed is a record of a life rather than an
-              algorithm's agenda.
+              follow along; only I can create. A living journal disguised as a social
+              app, where the feed is a record of a life rather than an algorithm's agenda.
             </p>
-            <a
-              href="https://thesologram.com"
-              class="project-link"
-              style="--link-color: #4a6fa5"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            <a href="https://thesologram.com" class="project-link" style="--link-color:#4a6fa5" target="_blank" rel="noopener noreferrer">
               <span>Visit SoloGram</span>
-              <svg
-                width="13"
-                height="13"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2.5"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              >
-                <line x1="7" y1="17" x2="17" y2="7" />
-                <polyline points="7 7 17 7 17 17" />
-              </svg>
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
             </a>
           </div>
           <div class="project-visual">
             <div class="visual-card sologram-card">
               <div class="vc-header">
-                <div class="vc-dots">
-                  <span></span><span style="background: #4a6fa555"></span
-                  ><span></span>
-                </div>
-                <span class="vc-label" style="color: #4a6fa5">SoloGram</span>
+                <div class="vc-dots"><span></span><span style="background:#4a6fa555"></span><span></span></div>
+                <span class="vc-label" style="color:#4a6fa5">SoloGram</span>
               </div>
               <div class="sg-img"></div>
               <div class="sg-meta">
-                <span class="sg-user" style="color: #4a6fa5"
-                  >@andrewbutler</span
-                >
-                <span class="sg-caption"
-                  >Salt Lake City golden hour. Some days the light makes the
-                  whole thing worth it.</span
-                >
+                <span class="sg-user" style="color:#4a6fa5">@andrewbutler</span>
+                <span class="sg-caption">Salt Lake City golden hour. Some days the light makes the whole thing worth it.</span>
                 <div class="sg-acts"><span>♥ 12</span><span>◎ 3</span></div>
               </div>
               <div class="sg-thought">
-                <div class="sg-thought-tag" style="color: #4a6fa5">THOUGHT</div>
-                <div class="sg-thought-body">
-                  "The discipline isn't in what you post. It's in what you
-                  don't."
-                </div>
+                <div class="sg-thought-tag" style="color:#4a6fa5">THOUGHT</div>
+                <div class="sg-thought-body">"The discipline isn't in what you post. It's in what you don't."</div>
               </div>
             </div>
           </div>
@@ -431,27 +266,24 @@
       <div class="about-inner">
         <div class="about-text reveal">
           <p>
-            I spent 24 years as a firefighter and fire chief — running into
-            burning buildings, managing crises at 3am, and learning that the
-            best leaders are the ones who stay calm when everything around them
-            isn't. Then I became an airline pilot. Today I fly as a First
-            Officer for Delta Air Lines, having previously served as a Captain
-            and Procedures Instructor for SkyWest. Two careers that most people
-            would consider a full life.
+            I spent 24 years as a firefighter and fire chief — running into burning buildings,
+            managing crises at 3am, and learning that the best leaders are the ones who stay
+            calm when everything around them isn't. Then I became an airline pilot. Today I fly
+            as a First Officer for Delta Air Lines, having previously served as a Captain and
+            Procedures Instructor for SkyWest. Two careers that most people would consider a
+            full life.
           </p>
           <p>
-            Outside of cockpits, you'll find me with a book (dark fiction,
-            always), at a piano, behind a camera, or watching the markets. I've
-            run nine marathons — not because it's fun, but because finishing
-            hard things matters. I once successfully litigated a case against a
-            local transmission company entirely on my own, which taught me more
-            about preparation than anything else ever has.
+            Outside of cockpits, you'll find me with a book (dark fiction, always), at a piano,
+            behind a camera, or watching the markets. I've run nine marathons — not because it's
+            fun, but because finishing hard things matters. I once successfully litigated a case
+            against a local transmission company entirely on my own, which taught me more about
+            preparation than anything else ever has.
           </p>
           <p>
-            Most importantly: I'm married to Beth, who is patient, brilliant,
-            and the reason any of this works. Together we have four incredible
-            kids — Hana, Macy, Jack, and Hudson — who remind me daily that the
-            best things you build aren't made of code.
+            Most importantly: I'm married to Beth, who is patient, brilliant, and the reason
+            any of this works. Together we have four incredible kids — Hana, Macy, Jack, and
+            Hudson — who remind me daily that the best things you build aren't made of code.
           </p>
         </div>
         <div class="about-stats reveal">
@@ -508,6 +340,26 @@
       </div>
     </section>
 
+      <!-- Travel callout -->
+      <a href="https://travel.andrewfbutler.com" target="_blank" rel="noopener noreferrer" class="travel-callout reveal">
+        <div class="travel-callout-inner">
+          <div class="travel-callout-left">
+            <div class="travel-callout-label">
+              <span class="label-line"></span>
+              Explore
+            </div>
+            <div class="travel-callout-title">28 countries.<br /><em>And counting.</em></div>
+            <div class="travel-callout-sub">An interactive map of everywhere I've been — 35 cities across 6 continents.</div>
+          </div>
+          <div class="travel-callout-cta">
+            <span>View the map</span>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </div>
+        </div>
+      </a>
+
+    </section>
+
     <!-- Footer -->
     <footer>
       <div class="footer-inner">
@@ -516,24 +368,9 @@
           <span class="footer-sub">Pilot · Chief · Builder · Dad</span>
         </div>
         <div class="footer-links">
-          <a
-            href="https://books.andrewfbutler.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            >Devoured</a
-          >
-          <a
-            href="https://dispatches.andrewfbutler.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            >Dispatches</a
-          >
-          <a
-            href="https://thesologram.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            >SoloGram</a
-          >
+          <a href="https://books.andrewfbutler.com" target="_blank" rel="noopener noreferrer">Devoured</a>
+          <a href="https://dispatches.andrewfbutler.com" target="_blank" rel="noopener noreferrer">Dispatches</a>
+          <a href="https://thesologram.com" target="_blank" rel="noopener noreferrer">SoloGram</a>
         </div>
         <span class="footer-copy">© 2026 Andrew Butler</span>
       </div>
