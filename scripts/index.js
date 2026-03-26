@@ -154,7 +154,7 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
 
 // ─── CONFIG ───────────────────────────────────────────────────────
 
-const TICKERS = ["NVDA", "SPY", "AAPL"];
+const TICKERS = ["SPY", "DIA", "QQQ", "VIXY", "USO"];
 
 const BOOT_LINES = [
   { text: "AFB DATA TERMINAL  v3.1.4", cls: "" },
