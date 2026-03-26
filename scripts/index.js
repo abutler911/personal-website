@@ -243,7 +243,7 @@ function refreshStatus() {
 }
 
 refreshStatus();
-setInterval(refreshStatus, 30_000);
+setInterval(refreshStatus, 15_000);
 
 // ─── SPARKLINE ────────────────────────────────────────────────────
 /**
