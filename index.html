@@ -86,7 +86,7 @@
               >Andrew</span
             >
             <span class="name-last" data-scramble data-delay="700"
-              ><em>Butler.</em></span
+              >Butler.</span
             >
           </h1>
           <p class="hero-desc">
@@ -109,6 +109,117 @@
               <polyline points="12 5 19 12 12 19" />
             </svg>
           </a>
+
+          <!--
+  ╔══════════════════════════════════════════════════════╗
+  ║  REPLACE the entire .trading-container div in        ║
+  ║  your HTML with this block.                          ║
+  ╚══════════════════════════════════════════════════════╝
+-->
+
+          <div class="trading-container">
+            <div class="terminal-card">
+              <!-- Boot overlay — fades out after JS boot sequence -->
+              <div class="term-boot" id="termBoot">
+                <div class="boot-lines" id="bootLines"></div>
+                <div class="boot-cursor">▮</div>
+              </div>
+
+              <!-- Main terminal body -->
+              <div class="term-body" id="termBody">
+                <!-- ── Header bar ── -->
+                <div class="term-header">
+                  <div class="term-logo">
+                    AFB<span class="term-blink">▮</span>
+                    <span class="term-logo-sub">DATA TERMINAL</span>
+                  </div>
+                  <div class="term-header-right">
+                    <span id="termClock" class="term-clock">--:--:--</span>
+                    <span id="termStatus" class="term-status offline"
+                      >○ INIT</span
+                    >
+                  </div>
+                </div>
+
+                <!-- ── Column labels ── -->
+                <div class="term-col-labels">
+                  <span>SYMBOL</span>
+                  <span>LAST</span>
+                  <span>CHG%</span>
+                  <span>5D ▸</span>
+                </div>
+
+                <!-- ── Ticker rows ── -->
+                <div class="term-rows" id="termRows">
+                  <div class="term-row" data-ticker="NVDA">
+                    <div class="term-sym">
+                      <span class="sym-code">NVDA</span>
+                      <span class="sym-sub">NVIDIA CORP</span>
+                    </div>
+                    <span class="term-price" id="price-NVDA">···</span>
+                    <span class="term-chg neutral" id="chg-NVDA">···</span>
+                    <div class="spark-wrap">
+                      <svg
+                        class="term-spark"
+                        id="spark-NVDA"
+                        viewBox="0 0 56 20"
+                        preserveAspectRatio="none"
+                      ></svg>
+                    </div>
+                  </div>
+
+                  <div class="term-row" data-ticker="SPY">
+                    <div class="term-sym">
+                      <span class="sym-code">SPY</span>
+                      <span class="sym-sub">S&amp;P 500 ETF</span>
+                    </div>
+                    <span class="term-price" id="price-SPY">···</span>
+                    <span class="term-chg neutral" id="chg-SPY">···</span>
+                    <div class="spark-wrap">
+                      <svg
+                        class="term-spark"
+                        id="spark-SPY"
+                        viewBox="0 0 56 20"
+                        preserveAspectRatio="none"
+                      ></svg>
+                    </div>
+                  </div>
+
+                  <div class="term-row" data-ticker="AAPL">
+                    <div class="term-sym">
+                      <span class="sym-code">AAPL</span>
+                      <span class="sym-sub">APPLE INC</span>
+                    </div>
+                    <span class="term-price" id="price-AAPL">···</span>
+                    <span class="term-chg neutral" id="chg-AAPL">···</span>
+                    <div class="spark-wrap">
+                      <svg
+                        class="term-spark"
+                        id="spark-AAPL"
+                        viewBox="0 0 56 20"
+                        preserveAspectRatio="none"
+                      ></svg>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- ── Footer / scrolling tape ── -->
+                <div class="term-footer">
+                  <div class="term-tape-track">
+                    <div class="term-tape" id="termTape">
+                      NVDA · SPY · AAPL · MARKET DATA · SLC UT USA · 40.76°N
+                      111.89°W ·&nbsp;&nbsp;&nbsp;&nbsp; NVDA · SPY · AAPL ·
+                      MARKET DATA · SLC UT USA · 40.76°N 111.89°W
+                      ·&nbsp;&nbsp;&nbsp;&nbsp;
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- /term-body -->
+            </div>
+            <!-- /terminal-card -->
+          </div>
+          <!-- /trading-container -->
         </div>
 
         <!-- Photo -->
