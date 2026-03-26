@@ -1667,6 +1667,11 @@ footer {
   border-color: rgba(155, 28, 28, 0.2);
 }
 
+.term-status.crypto {
+  color: #c9a24d;
+  border-color: rgba(201, 162, 77, 0.35);
+  text-shadow: 0 0 10px rgba(201, 162, 77, 0.4);
+}
 /* ─── COLUMN LABELS ─── */
 .term-col-labels {
   display: grid;

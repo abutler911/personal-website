@@ -154,7 +154,15 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
 
 // ─── CONFIG ───────────────────────────────────────────────────────
 
-const TICKERS = ["SPY", "DIA", "QQQ", "VIXY", "USO"];
+const TICKERS = [
+  { id: "SPY", symbol: "SPY", name: "S&P 500" },
+  { id: "DIA", symbol: "DIA", name: "DOW JONES" },
+  { id: "QQQ", symbol: "QQQ", name: "NASDAQ 100" },
+  { id: "VIXY", symbol: "VIXY", name: "VIX FUTURES" },
+  { id: "USO", symbol: "USO", name: "WTI CRUDE OIL" },
+  { id: "BTC", symbol: "BINANCE:BTCUSDT", name: "BITCOIN" },
+  { id: "ETH", symbol: "BINANCE:ETHUSDT", name: "ETHEREUM" },
+];
 
 const BOOT_LINES = [
   { text: "AFB DATA TERMINAL  v3.1.4", cls: "" },
@@ -218,9 +226,9 @@ function refreshStatus() {
     timeZone: "America/New_York",
   });
   const d = new Date(ny);
-  const day = d.getDay();
-  const h = d.getHours();
-  const m = d.getMinutes();
+  const day = d.getDay(),
+    h = d.getHours(),
+    m = d.getMinutes();
 
   const isOpen =
     day !== 0 && day !== 6 && (h > 9 || (h === 9 && m >= 30)) && h < 16;
@@ -229,8 +237,8 @@ function refreshStatus() {
     el.textContent = "● LIVE";
     el.className = "term-status live";
   } else {
-    el.textContent = "○ CLOSED";
-    el.className = "term-status offline";
+    el.textContent = "◑ CRYPTO";
+    el.className = "term-status crypto";
   }
 }
 
@@ -377,34 +385,31 @@ async function fetchTicker(symbol) {
 async function fetchAllTickers() {
   refreshStatus();
 
-  for (const symbol of TICKERS) {
+  for (const ticker of TICKERS) {
     try {
-      const data = await fetchTicker(symbol);
+      const res = await fetch(
+        `/.netlify/functions/quote?symbol=${ticker.symbol}`,
+      );
+      const data = await res.json();
       if (!data || !data.c) continue;
 
       const price = data.c;
       const pct = data.dp ?? 0;
       const dir = pct > 0.05 ? "up" : pct < -0.05 ? "down" : "neutral";
 
-      // Update DOM
-      const priceEl = document.getElementById(`price-${symbol}`);
-      const chgEl = document.getElementById(`chg-${symbol}`);
+      const priceEl = document.getElementById(`price-${ticker.id}`);
+      const chgEl = document.getElementById(`chg-${ticker.id}`);
 
       if (priceEl) priceEl.textContent = formatPrice(price);
-
       if (chgEl) {
         chgEl.textContent = formatChange(pct);
         chgEl.className = `term-chg ${dir}`;
       }
 
-      // Flash row
-      rowFlash(symbol, dir);
-
-      // Draw sparkline
-      const sparkData = syntheticSparkData(price, pct);
-      drawSparkline(`spark-${symbol}`, sparkData, dir);
+      rowFlash(ticker.id, dir);
+      drawSparkline(`spark-${ticker.id}`, syntheticSparkData(price, pct), dir);
     } catch (err) {
-      console.warn(`[terminal] ${symbol}:`, err.message);
+      console.warn(`[terminal] ${ticker.id}:`, err.message);
     }
   }
 
