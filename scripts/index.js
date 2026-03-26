@@ -364,15 +364,11 @@ function updateTape() {
   if (!tape) return;
 
   const segments = TICKERS.map((t) => {
-    const price = document.getElementById(`price-${t}`)?.textContent ?? "···";
-    const change = document.getElementById(`chg-${t}`)?.textContent ?? "";
-    return `${t} ${price} ${change}`;
+    const price =
+      document.getElementById(`price-${t.id}`)?.textContent ?? "···";
+    const change = document.getElementById(`chg-${t.id}`)?.textContent ?? "";
+    return `${t.id} ${price} ${change}`;
   });
-
-  const content =
-    segments.join("  ·  ") + "  ·  SLC UT · 40.76°N 111.89°W  ·  ";
-  // Double it for seamless loop
-  tape.textContent = content + content;
 }
 
 // ─── FETCH & RENDER ───────────────────────────────────────────────
@@ -419,5 +415,5 @@ async function fetchAllTickers() {
 // ─── INIT ─────────────────────────────────────────────────────────
 runBootSequence();
 
-// Refresh data every 60 s
-setInterval(fetchAllTickers, 60_000);
+// Refresh data every 15 s
+setInterval(fetchAllTickers, 15_000);
