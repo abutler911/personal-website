@@ -1901,3 +1901,186 @@ footer {
     transform: translateX(-50%);
   }
 }
+
+/*
+  ╔══════════════════════════════════════════════════════╗
+  ║  MARKETS SECTION — CSS                               ║
+  ║                                                      ║
+  ║  Append this to the bottom of styles.css, after      ║
+  ║  all the existing terminal card rules.               ║
+  ╚══════════════════════════════════════════════════════╝
+*/
+
+/* ─── MARKETS SECTION ─── */
+.markets-section {
+  width: 100%;
+  max-width: 100%;
+  padding: 0;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  background: var(--bg-elevated);
+  /* Subtle dark tint in light mode to make the terminal pop */
+  position: relative;
+  overflow: hidden;
+}
+
+/* Background texture — very subtle grid */
+.markets-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(var(--border) 1px, transparent 1px),
+    linear-gradient(90deg, var(--border) 1px, transparent 1px);
+  background-size: 40px 40px;
+  opacity: 0.4;
+  pointer-events: none;
+}
+
+.markets-inner {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 4rem 6vw;
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  gap: 4rem;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+
+/* ─── LEFT LABEL ─── */
+.markets-label {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+}
+
+.markets-label .label-line {
+  margin-top: 6px;
+  flex-shrink: 0;
+}
+
+.markets-label-text {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.markets-label-title {
+  font-family: var(--serif);
+  font-size: 2rem;
+  font-weight: 300;
+  font-style: italic;
+  color: var(--text-primary);
+  line-height: 1;
+  letter-spacing: -0.01em;
+}
+
+.markets-label-sub {
+  font-family: var(--mono);
+  font-size: 0.48rem;
+  font-weight: 400;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--accent);
+  opacity: 0.7;
+}
+
+/* ─── TERMINAL — wider in its own section ─── */
+.markets-section .trading-container {
+  max-width: 100%;
+  margin: 0;
+}
+
+/* Override the 7-row single-column layout with a 2-column grid */
+.markets-section .term-rows {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+  padding: 0;
+}
+
+.markets-section .term-row {
+  display: grid;
+  grid-template-columns: 1fr 60px 46px 36px;
+}
+
+/* Right column rows lose the right border */
+.markets-section .term-row:nth-child(even) {
+  border-right: none;
+}
+
+/* Bottom row pair loses the bottom border */
+.markets-section .term-row:nth-last-child(-n + 2) {
+  border-bottom: none;
+}
+
+/* 2-column label header */
+.markets-section .term-col-labels {
+  display: grid;
+  grid-template-columns: 1fr 60px 46px 36px 1fr 60px 46px 36px;
+  border-bottom: 1px solid rgba(155, 28, 28, 0.1);
+  padding: 5px 14px 4px;
+}
+
+/* Divider between the two halves of the column label */
+.markets-section .term-col-labels span:nth-child(5) {
+  padding-left: 14px;
+  border-left: 1px solid rgba(155, 28, 28, 0.1);
+}
+
+/* ─── RESPONSIVE ─── */
+@media (max-width: 1024px) {
+  .markets-inner {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .markets-label {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  /* Back to single column on smaller screens */
+  .markets-section .term-rows {
+    grid-template-columns: 1fr;
+  }
+
+  .markets-section .term-col-labels {
+    grid-template-columns: 1fr 68px 54px 44px;
+  }
+
+  /* Hide the duplicate column labels on mobile */
+  .markets-section .term-col-labels span:nth-child(n + 5) {
+    display: none;
+  }
+
+  .markets-section .term-row {
+    border-right: none;
+  }
+
+  .markets-section .term-row:nth-last-child(-n + 2) {
+    border-bottom: 1px solid rgba(155, 28, 28, 0.07);
+  }
+
+  .markets-section .term-row:last-child {
+    border-bottom: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .markets-inner {
+    padding: 3rem 5vw;
+  }
+}
+
+.markets-section .terminal-card {
+  overflow: hidden;
+  min-width: 0;
+}
+
+.markets-section .trading-container {
+  min-width: 0;
+  overflow: hidden;
+}

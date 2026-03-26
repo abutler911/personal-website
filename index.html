@@ -109,47 +109,89 @@
               <polyline points="12 5 19 12 12 19" />
             </svg>
           </a>
+        </div>
 
-          <!--
-  ╔══════════════════════════════════════════════════════╗
-  ║  REPLACE the entire .trading-container div in        ║
-  ║  your HTML with this block.                          ║
-  ╚══════════════════════════════════════════════════════╝
--->
+        <!-- Photo -->
+        <div class="hero-photo-wrap">
+          <div class="photo-outer">
+            <div class="photo-inner">
+              <img
+                src="images/hero-img.jpg"
+                alt="Andrew Butler"
+                class="hero-photo"
+              />
+              <div class="photo-overlay"></div>
+              <div class="photo-scanlines"></div>
+            </div>
+            <div class="corner corner-tl"></div>
+            <div class="corner corner-tr"></div>
+            <div class="corner corner-bl"></div>
+            <div class="corner corner-br"></div>
+          </div>
+          <div class="photo-tag">
+            <span class="photo-tag-dot"></span>
+            Salt Lake City, UT
+          </div>
+          <div class="photo-deco">
+            <span class="deco-rule"></span>
+            <span class="deco-label">Pilot · Chief · Builder</span>
+          </div>
+        </div>
+      </div>
+      <div class="hero-scroll">
+        <div class="scroll-bar"></div>
+      </div>
+    </section>
 
-          <div class="trading-container">
-            <div class="terminal-card">
-              <!-- Boot overlay — fades out after JS boot sequence -->
-              <div class="term-boot" id="termBoot">
-                <div class="boot-lines" id="bootLines"></div>
-                <div class="boot-cursor">▮</div>
+    <!-- ═══════════════════════════════════════════════
+         MARKETS — full-width section between hero & work
+         ═══════════════════════════════════════════════ -->
+    <section class="markets-section" id="markets">
+      <div class="markets-inner">
+        <!-- Left label -->
+        <div class="markets-label">
+          <span class="label-line"></span>
+          <div class="markets-label-text">
+            <span class="markets-label-title">Markets</span>
+            <span class="markets-label-sub">Live feed · 15s refresh</span>
+          </div>
+        </div>
+
+        <!-- Terminal -->
+        <div class="trading-container">
+          <div class="terminal-card">
+            <div class="term-boot" id="termBoot">
+              <div class="boot-lines" id="bootLines"></div>
+              <div class="boot-cursor">▮</div>
+            </div>
+
+            <div class="term-body" id="termBody">
+              <div class="term-header">
+                <div class="term-logo">
+                  AFB<span class="term-blink">▮</span>
+                  <span class="term-logo-sub">DATA TERMINAL</span>
+                </div>
+                <div class="term-header-right">
+                  <span id="termClock" class="term-clock">--:--:--</span>
+                  <span id="termStatus" class="term-status offline"
+                    >○ INIT</span
+                  >
+                </div>
               </div>
 
-              <!-- Main terminal body -->
-              <div class="term-body" id="termBody">
-                <!-- ── Header bar ── -->
-                <div class="term-header">
-                  <div class="term-logo">
-                    AFB<span class="term-blink">▮</span>
-                    <span class="term-logo-sub">DATA TERMINAL</span>
-                  </div>
-                  <div class="term-header-right">
-                    <span id="termClock" class="term-clock">--:--:--</span>
-                    <span id="termStatus" class="term-status offline"
-                      >○ INIT</span
-                    >
-                  </div>
-                </div>
+              <!-- Two-column grid of tickers -->
+              <div class="term-col-labels">
+                <span>SYMBOL</span>
+                <span>LAST</span>
+                <span>CHG%</span>
+                <span>TREND</span>
+                <span>SYMBOL</span>
+                <span>LAST</span>
+                <span>CHG%</span>
+                <span>TREND</span>
+              </div>
 
-                <!-- ── Column labels ── -->
-                <div class="term-col-labels">
-                  <span>SYMBOL</span>
-                  <span>LAST</span>
-                  <span>CHG%</span>
-                  <span>5D ▸</span>
-                </div>
-
-                <!-- ── Ticker rows ── -->
+              <div class="term-rows" id="termRows">
                 <div class="term-row" data-ticker="SPY">
                   <div class="term-sym">
                     <span class="sym-code">SPY</span>
@@ -234,6 +276,7 @@
                     ></svg>
                   </div>
                 </div>
+
                 <div class="term-row" data-ticker="BTC">
                   <div class="term-sym">
                     <span class="sym-code">BTC</span>
@@ -267,55 +310,27 @@
                     ></svg>
                   </div>
                 </div>
-                <!-- ── Footer / scrolling tape ── -->
-                <div class="term-footer">
-                  <div class="term-tape-track">
-                    <div class="term-tape" id="termTape">
-                      NVDA · SPY · AAPL · MARKET DATA · SLC UT USA · 40.76°N
-                      111.89°W ·&nbsp;&nbsp;&nbsp;&nbsp; NVDA · SPY · AAPL ·
-                      MARKET DATA · SLC UT USA · 40.76°N 111.89°W
-                      ·&nbsp;&nbsp;&nbsp;&nbsp;
-                    </div>
+              </div>
+              <!-- /term-rows -->
+
+              <div class="term-footer">
+                <div class="term-tape-track">
+                  <div class="term-tape" id="termTape">
+                    SPY · DIA · QQQ · VIXY · USO · BTC · ETH · MARKET DATA · SLC
+                    UT USA · 40.76°N 111.89°W ·&nbsp;&nbsp;&nbsp;&nbsp;SPY · DIA
+                    · QQQ · VIXY · USO · BTC · ETH · MARKET DATA · SLC UT USA ·
+                    40.76°N 111.89°W ·&nbsp;&nbsp;&nbsp;&nbsp;
                   </div>
                 </div>
               </div>
-              <!-- /term-body -->
             </div>
-            <!-- /terminal-card -->
+            <!-- /term-body -->
           </div>
-          <!-- /trading-container -->
+          <!-- /terminal-card -->
         </div>
-
-        <!-- Photo -->
-        <div class="hero-photo-wrap">
-          <div class="photo-outer">
-            <div class="photo-inner">
-              <img
-                src="images/hero-img.jpg"
-                alt="Andrew Butler"
-                class="hero-photo"
-              />
-              <div class="photo-overlay"></div>
-              <div class="photo-scanlines"></div>
-            </div>
-            <div class="corner corner-tl"></div>
-            <div class="corner corner-tr"></div>
-            <div class="corner corner-bl"></div>
-            <div class="corner corner-br"></div>
-          </div>
-          <div class="photo-tag">
-            <span class="photo-tag-dot"></span>
-            Salt Lake City, UT
-          </div>
-          <div class="photo-deco">
-            <span class="deco-rule"></span>
-            <span class="deco-label">Pilot · Chief · Builder</span>
-          </div>
-        </div>
+        <!-- /trading-container -->
       </div>
-      <div class="hero-scroll">
-        <div class="scroll-bar"></div>
-      </div>
+      <!-- /markets-inner -->
     </section>
 
     <!-- Work -->
@@ -487,8 +502,8 @@
                 <div class="dp-meta">
                   <span class="dp-num">No. 001</span
                   ><span class="dp-sep">//</span
-                  ><span class="dp-date">Mar 2026</span
-                  ><span
+                  ><span class="dp-date">Mar 2026</span>
+                  <span
                     class="dp-badge"
                     style="color: #c9a24d; border-color: #c9a24d44"
                     >Security</span
@@ -505,8 +520,8 @@
                 <div class="dp-meta">
                   <span class="dp-num">No. 002</span
                   ><span class="dp-sep">//</span
-                  ><span class="dp-date">Mar 2026</span
-                  ><span
+                  ><span class="dp-date">Mar 2026</span>
+                  <span
                     class="dp-badge"
                     style="color: #8cbf8c; border-color: #8cbf8c44"
                     >Europe</span
@@ -648,7 +663,7 @@
             <div class="about-stat-label">Marathons Finished</div>
           </div>
           <div class="about-stat">
-            <div class="about-stat-num">5</div>
+            <div class="about-stat-num">4</div>
             <div class="about-stat-label">Kids Who Keep Me Honest</div>
           </div>
           <div class="about-stat">
@@ -681,7 +696,7 @@
         </div>
         <div class="number-divider"></div>
         <div class="number-item">
-          <span class="number-val">5</span>
+          <span class="number-val">4</span>
           <span class="number-label">Kids · Dad</span>
         </div>
         <div class="number-divider"></div>
