@@ -2090,3 +2090,7 @@ footer {
   width: 100%;
   overflow: hidden;
 }
+
+.markets-section .spark-wrap {
+  padding-left: 6px;
+}
