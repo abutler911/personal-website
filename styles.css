@@ -707,8 +707,25 @@ section {
   box-shadow: var(--shadow-hover);
 }
 
+/* Per-project colored glow on hover */
+.project-sologram:hover .visual-card {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-hover), 0 0 60px rgba(74, 111, 165, 0.12);
+}
+
+.project-devoured:hover .visual-card {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-hover), 0 0 60px rgba(155, 28, 28, 0.14);
+}
+
+.project-leftseat:hover .visual-card {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-hover), 0 0 60px rgba(91, 163, 201, 0.12);
+}
+
 .devoured-card {
   border-color: rgba(155, 28, 28, 0.15);
+  border-top: 2px solid rgba(155, 28, 28, 0.45);
 }
 .dispatches-card {
   border-color: rgba(201, 162, 77, 0.15);
@@ -717,6 +734,7 @@ section {
 }
 .sologram-card {
   border-color: rgba(74, 111, 165, 0.15);
+  border-top: 2px solid rgba(74, 111, 165, 0.45);
 }
 
 .vc-header {
@@ -2093,4 +2111,172 @@ footer {
 
 .markets-section .spark-wrap {
   padding-left: 6px;
+}
+
+/* ─── PROJECT BACKGROUND NUMBER WATERMARK ─── */
+.project {
+  position: relative;
+}
+
+.project::before {
+  content: attr(data-num);
+  position: absolute;
+  top: -1rem;
+  right: -0.5rem;
+  font-family: var(--serif);
+  font-size: clamp(7rem, 13vw, 15rem);
+  font-weight: 300;
+  line-height: 1;
+  letter-spacing: -0.05em;
+  color: var(--text-primary);
+  opacity: 0.028;
+  pointer-events: none;
+  user-select: none;
+  z-index: 0;
+}
+
+.project-inner {
+  position: relative;
+  z-index: 1;
+}
+
+/* ─── LEFTSEAT CARD ─── */
+.leftseat-card {
+  border-color: rgba(91, 163, 201, 0.15);
+  border-top: 2px solid rgba(91, 163, 201, 0.45);
+  background: #06090f;
+  color: #c8d8e4;
+}
+
+.leftseat-card .vc-header {
+  border-bottom-color: rgba(91, 163, 201, 0.12);
+}
+
+/* Route display */
+.ls-route {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 14px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid rgba(91, 163, 201, 0.1);
+}
+
+.ls-apt {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  flex-shrink: 0;
+}
+
+.ls-apt-right {
+  text-align: right;
+}
+
+.ls-icao {
+  font-family: var(--mono);
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: #c8d8e4;
+  letter-spacing: 0.05em;
+  line-height: 1;
+}
+
+.ls-city {
+  font-family: var(--mono);
+  font-size: 0.38rem;
+  color: rgba(91, 163, 201, 0.45);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.ls-flight-line {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  min-width: 0;
+}
+
+.ls-track {
+  width: 100%;
+}
+
+.ls-dist {
+  font-family: var(--mono);
+  font-size: 0.38rem;
+  color: rgba(91, 163, 201, 0.4);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+/* Instrument stats */
+.ls-instruments {
+  display: flex;
+  align-items: center;
+  margin-bottom: 14px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid rgba(91, 163, 201, 0.08);
+}
+
+.ls-inst {
+  flex: 1;
+  text-align: center;
+}
+
+.ls-inst-val {
+  font-family: var(--serif);
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #5ba3c9;
+  line-height: 1;
+  margin-bottom: 4px;
+}
+
+.ls-inst-plus {
+  font-size: 0.85rem;
+  vertical-align: super;
+  font-weight: 400;
+}
+
+.ls-inst-key {
+  font-family: var(--mono);
+  font-size: 0.42rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(91, 163, 201, 0.45);
+}
+
+.ls-inst-div {
+  width: 1px;
+  height: 28px;
+  background: rgba(91, 163, 201, 0.12);
+  flex-shrink: 0;
+}
+
+/* Log entry */
+.ls-log {
+  background: rgba(91, 163, 201, 0.04);
+  border: 1px solid rgba(91, 163, 201, 0.14);
+  border-radius: 4px;
+  padding: 10px 12px;
+}
+
+.ls-log-tag {
+  font-family: var(--mono);
+  font-size: 0.44rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  margin-bottom: 5px;
+}
+
+.ls-log-body {
+  font-family: var(--serif);
+  font-size: 0.82rem;
+  font-style: italic;
+  color: rgba(200, 216, 228, 0.65);
+  line-height: 1.5;
 }
