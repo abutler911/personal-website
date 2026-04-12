@@ -526,21 +526,20 @@
               <span class="project-num">03</span>
               <span class="project-year">2025 – 2026</span>
               <div class="project-tags">
-                <span class="tag">Aviation</span>
+                <span class="tag">React</span>
                 <span class="tag">Node.js</span>
-                <span class="tag">Blog</span>
-                <span class="tag">CMS</span>
+                <span class="tag">Full Stack</span>
+                <span class="tag">Aviation</span>
               </div>
             </div>
             <h2 class="project-title">LeftSeatLore</h2>
-            <p class="project-tagline">"Stories from the left seat."</p>
+            <p class="project-tagline">"Know your left seat before you strap in."</p>
             <p class="project-desc">
-              Aviation storytelling from the captain's perspective — logbook
-              narratives, cockpit observations, and lessons that only 30,000
-              feet can teach. A custom CMS, tag filtering, and a design that
-              feels like a night flight: dark, precise, deliberate. Built for
-              the handful of people who actually want to know what it's like up
-              there.
+              A private crew-awareness app for first officers. Before a pairing,
+              pull up your notes on that captain — their briefing style, aircraft
+              preferences, quirks worth knowing, anything that helps you show up
+              prepared. The kind of quiet situational awareness that makes every
+              leg better and every pairing more professional.
             </p>
             <a
               href="https://leftseatlore.com"
@@ -576,68 +575,46 @@
                   >LeftSeatLore</span
                 >
               </div>
-              <div class="ls-route">
-                <div class="ls-apt">
-                  <span class="ls-icao">KSLC</span>
-                  <span class="ls-city">Salt Lake City</span>
-                </div>
-                <div class="ls-flight-line">
-                  <div class="ls-track">
-                    <svg
-                      width="100%"
-                      height="10"
-                      viewBox="0 0 80 10"
-                      preserveAspectRatio="none"
-                    >
-                      <line
-                        x1="0"
-                        y1="5"
-                        x2="62"
-                        y2="5"
-                        stroke="#5ba3c9"
-                        stroke-width="0.8"
-                        stroke-dasharray="3 2.5"
-                        opacity="0.4"
-                      />
-                      <polygon
-                        points="62,2.5 74,5 62,7.5"
-                        fill="#5ba3c9"
-                        opacity="0.65"
-                      />
-                    </svg>
-                  </div>
-                  <span class="ls-dist">FL380 · 517 nm</span>
-                </div>
-                <div class="ls-apt ls-apt-right">
-                  <span class="ls-icao">KSEA</span>
-                  <span class="ls-city">Seattle</span>
-                </div>
+              <!-- Search bar -->
+              <div class="ls-search">
+                <svg
+                  width="10"
+                  height="10"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="ls-search-icon"
+                >
+                  <circle cx="11" cy="11" r="8" />
+                  <line x1="21" y1="21" x2="16.65" y2="16.65" />
+                </svg>
+                <span class="ls-search-text">Search captains...</span>
               </div>
-              <div class="ls-instruments">
-                <div class="ls-inst">
-                  <div class="ls-inst-val">
-                    4,200<span class="ls-inst-plus">+</span>
+              <!-- Captain profile -->
+              <div class="ls-profile">
+                <div class="ls-profile-header">
+                  <div class="ls-avatar">RM</div>
+                  <div class="ls-profile-info">
+                    <div class="ls-profile-name">Capt. R. Morrison</div>
+                    <div class="ls-profile-meta">SLC · B737 · 14 yrs</div>
                   </div>
-                  <div class="ls-inst-key">Flight Hours</div>
+                  <div class="ls-flew">
+                    <div class="ls-flew-label">Last flew</div>
+                    <div class="ls-flew-date">Apr 2026</div>
+                  </div>
                 </div>
-                <div class="ls-inst-div"></div>
-                <div class="ls-inst">
-                  <div class="ls-inst-val">2</div>
-                  <div class="ls-inst-key">Airlines</div>
+                <div class="ls-note">
+                  "Quiet on cruise. Thorough briefings. Prefers CG near aft
+                  limit. Sharp on weather."
                 </div>
-                <div class="ls-inst-div"></div>
-                <div class="ls-inst">
-                  <div class="ls-inst-val">Capt.</div>
-                  <div class="ls-inst-key">Left Seat</div>
-                </div>
-              </div>
-              <div class="ls-log">
-                <div class="ls-log-tag" style="color: #5ba3c9">
-                  CAPTAIN'S LOG
-                </div>
-                <div class="ls-log-body">
-                  "There is a particular quiet at cruise altitude that no other
-                  life provides."
+                <div class="ls-chips">
+                  <span class="ls-chip">SLC Base</span>
+                  <span class="ls-chip">B737</span>
+                  <span class="ls-chip">Methodical</span>
+                  <span class="ls-chip">Wx aware</span>
                 </div>
               </div>
             </div>

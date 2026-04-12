@@ -2152,131 +2152,134 @@ footer {
   border-bottom-color: rgba(91, 163, 201, 0.12);
 }
 
-/* Route display */
-.ls-route {
+/* Search bar */
+.ls-search {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(91, 163, 201, 0.05);
+  border: 1px solid rgba(91, 163, 201, 0.14);
+  border-radius: 4px;
+  padding: 7px 10px;
+  margin-bottom: 14px;
+}
+
+.ls-search-icon {
+  color: #5ba3c9;
+  flex-shrink: 0;
+}
+
+.ls-search-text {
+  font-family: var(--mono);
+  font-size: 0.48rem;
+  letter-spacing: 0.06em;
+  color: rgba(91, 163, 201, 0.35);
+}
+
+/* Captain profile card */
+.ls-profile {
+  background: rgba(91, 163, 201, 0.04);
+  border: 1px solid rgba(91, 163, 201, 0.12);
+  border-radius: 5px;
+  padding: 12px;
+}
+
+.ls-profile-header {
   display: flex;
   align-items: center;
   gap: 10px;
-  margin-bottom: 14px;
-  padding-bottom: 14px;
-  border-bottom: 1px solid rgba(91, 163, 201, 0.1);
-}
-
-.ls-apt {
-  display: flex;
-  flex-direction: column;
-  gap: 2px;
-  flex-shrink: 0;
-}
-
-.ls-apt-right {
-  text-align: right;
-}
-
-.ls-icao {
-  font-family: var(--mono);
-  font-size: 0.88rem;
-  font-weight: 700;
-  color: #c8d8e4;
-  letter-spacing: 0.05em;
-  line-height: 1;
-}
-
-.ls-city {
-  font-family: var(--mono);
-  font-size: 0.38rem;
-  color: rgba(91, 163, 201, 0.45);
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-}
-
-.ls-flight-line {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 4px;
-  min-width: 0;
-}
-
-.ls-track {
-  width: 100%;
-}
-
-.ls-dist {
-  font-family: var(--mono);
-  font-size: 0.38rem;
-  color: rgba(91, 163, 201, 0.4);
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  white-space: nowrap;
-}
-
-/* Instrument stats */
-.ls-instruments {
-  display: flex;
-  align-items: center;
-  margin-bottom: 14px;
-  padding-bottom: 14px;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
   border-bottom: 1px solid rgba(91, 163, 201, 0.08);
 }
 
-.ls-inst {
-  flex: 1;
-  text-align: center;
-}
-
-.ls-inst-val {
-  font-family: var(--serif);
-  font-size: 1.5rem;
-  font-weight: 600;
-  color: #5ba3c9;
-  line-height: 1;
-  margin-bottom: 4px;
-}
-
-.ls-inst-plus {
-  font-size: 0.85rem;
-  vertical-align: super;
-  font-weight: 400;
-}
-
-.ls-inst-key {
-  font-family: var(--mono);
-  font-size: 0.42rem;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: rgba(91, 163, 201, 0.45);
-}
-
-.ls-inst-div {
-  width: 1px;
-  height: 28px;
+.ls-avatar {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
   background: rgba(91, 163, 201, 0.12);
+  border: 1px solid rgba(91, 163, 201, 0.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--mono);
+  font-size: 0.44rem;
+  font-weight: 700;
+  color: #5ba3c9;
+  letter-spacing: 0.04em;
   flex-shrink: 0;
 }
 
-/* Log entry */
-.ls-log {
-  background: rgba(91, 163, 201, 0.04);
-  border: 1px solid rgba(91, 163, 201, 0.14);
-  border-radius: 4px;
-  padding: 10px 12px;
+.ls-profile-info {
+  flex: 1;
+  min-width: 0;
 }
 
-.ls-log-tag {
+.ls-profile-name {
   font-family: var(--mono);
-  font-size: 0.44rem;
-  font-weight: 600;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  margin-bottom: 5px;
+  font-size: 0.58rem;
+  font-weight: 700;
+  color: #c8d8e4;
+  letter-spacing: 0.04em;
+  margin-bottom: 2px;
 }
 
-.ls-log-body {
+.ls-profile-meta {
+  font-family: var(--mono);
+  font-size: 0.4rem;
+  color: rgba(91, 163, 201, 0.5);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.ls-flew {
+  text-align: right;
+  flex-shrink: 0;
+}
+
+.ls-flew-label {
+  font-family: var(--mono);
+  font-size: 0.38rem;
+  color: rgba(91, 163, 201, 0.4);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 2px;
+}
+
+.ls-flew-date {
+  font-family: var(--mono);
+  font-size: 0.48rem;
+  font-weight: 600;
+  color: #5ba3c9;
+  letter-spacing: 0.04em;
+}
+
+/* Note/lore entry */
+.ls-note {
   font-family: var(--serif);
-  font-size: 0.82rem;
+  font-size: 0.8rem;
   font-style: italic;
-  color: rgba(200, 216, 228, 0.65);
-  line-height: 1.5;
+  color: rgba(200, 216, 228, 0.6);
+  line-height: 1.55;
+  margin-bottom: 10px;
+}
+
+/* Tag chips */
+.ls-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+.ls-chip {
+  font-family: var(--mono);
+  font-size: 0.42rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #5ba3c9;
+  background: rgba(91, 163, 201, 0.08);
+  border: 1px solid rgba(91, 163, 201, 0.2);
+  border-radius: 2px;
+  padding: 2px 7px;
 }
