@@ -3,11 +3,19 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Andrew Butler</title>
+    <title>Andrew Butler — Pilot, Builder, Salt Lake City</title>
     <meta
       name="description"
       content="Andrew Butler — retired fire chief, airline pilot, builder. Salt Lake City."
     />
+    <meta property="og:title" content="Andrew Butler — Pilot, Builder, Salt Lake City" />
+    <meta property="og:description" content="Retired fire chief. Airline pilot. Builder of things. Salt Lake City, Utah." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://andrewfbutler.com" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Andrew Butler — Pilot, Builder, Salt Lake City" />
+    <meta name="twitter:description" content="Retired fire chief. Airline pilot. Builder of things. Salt Lake City, Utah." />
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>✈</text></svg>" />
     <link rel="stylesheet" href="styles.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -90,7 +98,7 @@
             >
           </h1>
           <p class="hero-desc">
-            Retired fire chief. Airline pilot.<br />
+            Retired fire chief. Airline pilot. Builder.<br />
             Proud husband and dad.
           </p>
           <a href="#work" class="hero-cta">
@@ -310,16 +318,34 @@
                     ></svg>
                   </div>
                 </div>
+
+                <div class="term-row" data-ticker="NVDA">
+                  <div class="term-sym">
+                    <span class="sym-code">NVDA</span>
+                    <span class="sym-sub">NVIDIA</span>
+                  </div>
+                  <span class="term-price" id="price-NVDA">···</span>
+                  <span class="term-chg neutral" id="chg-NVDA">···</span>
+                  <div class="spark-wrap">
+                    <svg
+                      class="term-spark"
+                      id="spark-NVDA"
+                      viewBox="0 0 56 20"
+                      preserveAspectRatio="none"
+                    ></svg>
+                  </div>
+                </div>
               </div>
               <!-- /term-rows -->
 
               <div class="term-footer">
                 <div class="term-tape-track">
                   <div class="term-tape" id="termTape">
-                    SPY · DIA · QQQ · VIXY · USO · BTC · ETH · MARKET DATA · SLC
-                    UT USA · 40.76°N 111.89°W ·&nbsp;&nbsp;&nbsp;&nbsp;SPY · DIA
-                    · QQQ · VIXY · USO · BTC · ETH · MARKET DATA · SLC UT USA ·
-                    40.76°N 111.89°W ·&nbsp;&nbsp;&nbsp;&nbsp;
+                    SPY · DIA · QQQ · VIXY · USO · BTC · ETH · NVDA · MARKET
+                    DATA · SLC UT USA · 40.76°N 111.89°W
+                    ·&nbsp;&nbsp;&nbsp;&nbsp;SPY · DIA · QQQ · VIXY · USO · BTC
+                    · ETH · NVDA · MARKET DATA · SLC UT USA · 40.76°N 111.89°W
+                    ·&nbsp;&nbsp;&nbsp;&nbsp;
                   </div>
                 </div>
               </div>
@@ -337,6 +363,7 @@
     <section id="work">
       <div class="section-header-row">
         <span class="section-mono">Selected Work</span>
+        <span class="section-year-range">2025 – 2026</span>
         <div class="section-rule"></div>
       </div>
 
@@ -395,7 +422,20 @@
                 </div>
                 <span class="vc-label" style="color: #4a6fa5">SoloGram</span>
               </div>
-              <div class="sg-img"></div>
+              <div class="sg-stories">
+                <div class="sg-story sg-story--active">
+                  <span class="sg-story-label">Your Story</span>
+                </div>
+                <div class="sg-story sg-story--seen">
+                  <span class="sg-story-label">Mountains</span>
+                </div>
+                <div class="sg-story sg-story--seen">
+                  <span class="sg-story-label">Flight Deck</span>
+                </div>
+              </div>
+              <div class="sg-img">
+                <div class="sg-img-location">📍 Salt Lake City, UT</div>
+              </div>
               <div class="sg-meta">
                 <span class="sg-user" style="color: #4a6fa5"
                   >@andrewbutler</span
@@ -658,20 +698,20 @@
         </div>
         <div class="about-stats reveal">
           <div class="about-stat">
-            <div class="about-stat-num">24</div>
-            <div class="about-stat-label">Years in the Fire Service</div>
-          </div>
-          <div class="about-stat">
-            <div class="about-stat-num">9</div>
-            <div class="about-stat-label">Marathons Finished</div>
-          </div>
-          <div class="about-stat">
-            <div class="about-stat-num">4</div>
-            <div class="about-stat-label">Kids Who Keep Me Honest</div>
-          </div>
-          <div class="about-stat">
             <div class="about-stat-num">173</div>
             <div class="about-stat-label">Day Reading Streak</div>
+          </div>
+          <div class="about-stat">
+            <div class="about-stat-num">28</div>
+            <div class="about-stat-label">Countries Visited</div>
+          </div>
+          <div class="about-stat">
+            <div class="about-stat-num">33</div>
+            <div class="about-stat-label">Books Consumed This Year</div>
+          </div>
+          <div class="about-stat">
+            <div class="about-stat-num">35</div>
+            <div class="about-stat-label">Cities Across 6 Continents</div>
           </div>
         </div>
       </div>
@@ -679,32 +719,32 @@
       <!-- By the numbers strip -->
       <div class="numbers-strip reveal">
         <div class="number-item">
-          <span class="number-val">24</span>
+          <span class="number-val" data-count-to="24">24</span>
           <span class="number-label">Years · Fire Chief</span>
         </div>
         <div class="number-divider"></div>
         <div class="number-item">
-          <span class="number-val">2</span>
+          <span class="number-val" data-count-to="2">2</span>
           <span class="number-label">Airlines · Pilot</span>
         </div>
         <div class="number-divider"></div>
         <div class="number-item">
-          <span class="number-val">9</span>
+          <span class="number-val" data-count-to="9">9</span>
           <span class="number-label">Marathons · Runner</span>
         </div>
         <div class="number-divider"></div>
         <div class="number-item">
-          <span class="number-val">3</span>
+          <span class="number-val" data-count-to="3">3</span>
           <span class="number-label">Degrees · Student</span>
         </div>
         <div class="number-divider"></div>
         <div class="number-item">
-          <span class="number-val">4</span>
+          <span class="number-val" data-count-to="4">4</span>
           <span class="number-label">Kids · Dad</span>
         </div>
         <div class="number-divider"></div>
         <div class="number-item">
-          <span class="number-val">1</span>
+          <span class="number-val" data-count-to="1">1</span>
           <span class="number-label">Beth · Husband</span>
         </div>
       </div>
