@@ -162,6 +162,7 @@ const TICKERS = [
   { id: "USO", symbol: "USO", name: "WTI CRUDE OIL" },
   { id: "BTC", symbol: "BINANCE:BTCUSDT", name: "BITCOIN" },
   { id: "ETH", symbol: "BINANCE:ETHUSDT", name: "ETHEREUM" },
+  { id: "NVDA", symbol: "NVDA", name: "NVIDIA" },
 ];
 
 const BOOT_LINES = [
@@ -411,6 +412,41 @@ async function fetchAllTickers() {
 
   updateTape();
 }
+
+// ─── NUMBER COUNTER ANIMATION ────────────────────────────────────
+function animateCounter(el) {
+  const target = parseInt(el.dataset.countTo, 10);
+  if (isNaN(target)) return;
+  const duration = 1800;
+  const start = performance.now();
+
+  function step(now) {
+    const elapsed = now - start;
+    const progress = Math.min(elapsed / duration, 1);
+    // Ease-out cubic
+    const eased = 1 - Math.pow(1 - progress, 3);
+    el.textContent = Math.round(eased * target);
+    if (progress < 1) requestAnimationFrame(step);
+  }
+  requestAnimationFrame(step);
+}
+
+const counterObserver = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        animateCounter(entry.target);
+        counterObserver.unobserve(entry.target);
+      }
+    });
+  },
+  { threshold: 0.6 },
+);
+
+document.querySelectorAll(".number-val[data-count-to]").forEach((el) => {
+  el.textContent = "0";
+  counterObserver.observe(el);
+});
 
 // ─── INIT ─────────────────────────────────────────────────────────
 runBootSequence();
