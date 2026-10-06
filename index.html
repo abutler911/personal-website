@@ -33,6 +33,72 @@
       <ul class="nav-links" id="navLinks">
         <li><a href="#about" onclick="closeNav()">About</a></li>
         <li><a href="#work" onclick="closeNav()">Work</a></li>
+        <li class="nav-projects">
+          <button
+            class="nav-projects-toggle"
+            id="projectsToggle"
+            aria-expanded="false"
+            aria-controls="projectsMenu"
+          >
+            Projects
+            <svg
+              width="9"
+              height="9"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <polyline points="6 9 12 15 18 9" />
+            </svg>
+          </button>
+          <ul class="projects-menu" id="projectsMenu">
+            <li>
+              <a href="https://thesologram.com" target="_blank" rel="noopener noreferrer">
+                <span class="pm-name">SoloGram</span>
+                <span class="pm-desc">Personal social feed</span>
+              </a>
+            </li>
+            <li>
+              <a href="https://books.andrewfbutler.com" target="_blank" rel="noopener noreferrer">
+                <span class="pm-name">Devoured</span>
+                <span class="pm-desc">Reading tracker</span>
+              </a>
+            </li>
+            <li>
+              <a href="https://leftseatlore.com" target="_blank" rel="noopener noreferrer">
+                <span class="pm-name">LeftSeatLore</span>
+                <span class="pm-desc">Captain notes</span>
+              </a>
+            </li>
+            <li>
+              <a href="TODO_ENCRYPT_THIS_URL" target="_blank" rel="noopener noreferrer">
+                <span class="pm-name">Encrypt This</span>
+                <span class="pm-desc">Password-encrypt a note</span>
+              </a>
+            </li>
+            <li>
+              <a href="TODO_CREW_STATUS_URL" target="_blank" rel="noopener noreferrer">
+                <span class="pm-name">Crew Status</span>
+                <span class="pm-desc">Current trip board</span>
+              </a>
+            </li>
+            <li>
+              <a href="TODO_100_DAYS_URL" target="_blank" rel="noopener noreferrer">
+                <span class="pm-name">100 Days</span>
+                <span class="pm-desc">Savings challenge</span>
+              </a>
+            </li>
+            <li>
+              <a href="https://travel.andrewfbutler.com" target="_blank" rel="noopener noreferrer">
+                <span class="pm-name">Travels</span>
+                <span class="pm-desc">Trip journal</span>
+              </a>
+            </li>
+          </ul>
+        </li>
         <li>
           <a
             href="https://travel.andrewfbutler.com"

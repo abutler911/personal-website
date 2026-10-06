@@ -99,7 +99,37 @@ const navLinks = document.getElementById("navLinks");
 navToggle.addEventListener("click", () => navLinks.classList.toggle("open"));
 function closeNav() {
   navLinks.classList.remove("open");
+  setProjectsOpen(false);
 }
+
+// ─── Projects menu ───
+const projectsItem = document.querySelector(".nav-projects");
+const projectsToggle = document.getElementById("projectsToggle");
+
+function setProjectsOpen(open) {
+  projectsItem.classList.toggle("open", open);
+  projectsToggle.setAttribute("aria-expanded", String(open));
+}
+
+projectsToggle.addEventListener("click", (e) => {
+  e.stopPropagation();
+  setProjectsOpen(!projectsItem.classList.contains("open"));
+});
+
+projectsItem
+  .querySelectorAll(".projects-menu a")
+  .forEach((link) => link.addEventListener("click", closeNav));
+
+document.addEventListener("click", (e) => {
+  if (!projectsItem.contains(e.target)) setProjectsOpen(false);
+});
+
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Escape" && projectsItem.classList.contains("open")) {
+    setProjectsOpen(false);
+    projectsToggle.focus();
+  }
+});
 
 // ─── Scroll reveal ───
 const observer = new IntersectionObserver(
